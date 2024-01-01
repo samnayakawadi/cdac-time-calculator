@@ -6,7 +6,7 @@ const App = () => {
 
   const getLocalTime = (timeInMS) => {
     const time = new Date(timeInMS)
-    return time.toLocaleTimeString()
+    return time.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' }) // Gives Date in String with AM-PM Support
   }
 
   const [workingTime, setWorkingTime] = useState(eightHoursThirtyMinutesInMilliseconds)
